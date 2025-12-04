@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>MiniMind — Le Mot-Mystère</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>🧠 MiniMind — Le Mot-Mystère</h1>
+      <p class="subtitle">Tape le début d'une phrase, découvre 4 mots possibles et vois "dans la tête" de l'IA.</p>
+    </header>
+
+    <main class="container">
+      <section class="left">
+        <label for="userInput">Commence ta phrase :</label>
+        <input id="userInput" placeholder="Ex : Hier j'ai vu un " />
+        <div class="controls">
+          <button id="btnPredict">🔮 Deviner</button>
+          <span id="status" class="status"></span>
+        </div>
+
+        <div id="tokenRow" class="token-row"></div>
+
+        <h3>Suggestions :</h3>
+        <div id="cards" class="cards"></div>
+      </section>
+
+      <aside class="right">
+        <div class="brain" id="brain">
+          <!-- SVG overlay will be inserted for arrows -->
+          <svg id="arrowSvg" class="arrow-svg"></svg>
+          <div class="brain-placeholder">🧠 Cerveau interactif</div>
+        </div>
+
+        <div class="explain">
+          <h4>Comment ça marche (simple)</h4>
+          <ol>
+            <li>Le modèle lit ta phrase, transforme les mots en nombres (tokens).</li>
+            <li>Il calcule la probabilité des mots qui peuvent venir après.</li>
+            <li>On affiche les 4 mots les plus probables avec leur pourcentage.</li>
+            <li>En cliquant, tu vois quelles bulles-mots ont le plus influencé (flèches).</li>
+          </ol>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

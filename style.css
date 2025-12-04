@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f8ff;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    background: white;
+    margin: auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+#results {
+    margin-top: 20px;
+}
+
+.word {
+    padding: 10px;
+    margin: 5px;
+    background: #e0e7ff;
+    border-radius: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.word:hover {
+    transform: scale(1.1);
+    background: #c7d2fe;
+}
+/* effet sélection */
+.card.selected {
+  transform: scale(1.08);
+  background: linear-gradient(90deg,#2b8cff,#7ee6a6);
+  color: white;
+  box-shadow: 0 12px 30px rgba(43,140,255,0.18);
+}
+.card.selected .word { font-size: 20px; }
+.explain-popup{
+  position:absolute; z-index:9999; background:white; padding:8px 10px; border-radius:8px;
+  border:1px solid #eef6ff; box-shadow:0 10px 20px rgba(0,0,0,0.08); font-weight:600;
+}
